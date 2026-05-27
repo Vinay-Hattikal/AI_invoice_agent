@@ -25,5 +25,5 @@
   ],
   "total_amount": -45924.0,
   "confidence_score": 0.95,
-  "reasoning": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided. The total amount extracted is the 'Total Credit Note' value of -45924, which reflects the total credit being issued."
+  "reasoning": "The document is classified as a credit note based on the presence of 'CREDIT NOTE' in the title and the structure of the document. The total amount extracted is the 'Total Credit Note' amount of -45,924."
 }

@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Operational Control Elements
     const btnRefreshLogs = document.getElementById("btn-refresh-logs");
     const btnExportLogs = document.getElementById("btn-export-logs");
+    const btnExportUnder50k = document.getElementById("btn-export-under-50k");
 
     // Human Override Panel Elements
     const humanOverridePanel = document.getElementById("human-override-panel");
@@ -346,6 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCloseModal.addEventListener("click", closeModal);
     modalCloseBackdrop.addEventListener("click", closeModal);
     btnExportLogs.addEventListener("click", exportLogsToCSV);
+    btnExportUnder50k.addEventListener("click", exportUnder50kCSV);
 
     btnAdjustFields.addEventListener("click", () => {
         overrideViewMode.classList.add("hidden");
@@ -704,7 +706,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Email Preview logic
         emailTo.textContent = eventData.from || "onboarding@resend.dev";
         
-        const emailStatusText = outcome.status === "failed" ? "FAILED" : (ext.document_type === "unknown" ? "PARTIAL" : "SUCCESS");
+        const emailStatusText = outcome.status === "failed" ? "FAILED" : (outcome.status === "partial" ? "PARTIAL" : "SUCCESS");
         emailSubject.textContent = `Acknowledgement: Invoice Processing Status [${emailStatusText}]`;
 
         // Render mock email body content
@@ -850,6 +852,12 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Export failed:", err);
             showToast(`Export failed: ${err.message}`, false);
         }
+    }
+
+    // Export invoices less than or equal to 50000
+    function exportUnder50kCSV() {
+        window.location.href = `${API_BASE}/api/export/processed`;
+        showToast("Invoices (<= 50k) exported successfully!", true);
     }
 
     // Interactive toast messages sliding indicator

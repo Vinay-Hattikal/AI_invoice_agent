@@ -25,5 +25,5 @@
   ],
   "total_amount": 7280.0,
   "confidence_score": 0.95,
-  "reasoning": "The document is classified as a standard invoice as it contains all necessary details including vendor name, invoice number, date, line items, and total amount."
+  "reasoning": "The document is a standard invoice with all required details including vendor name, invoice number, date, line items, and total amount clearly stated."
 }

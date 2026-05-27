@@ -123,12 +123,7 @@ def run_pipeline(payload_path: str = "sample_documents/webhook_payload.json", do
         # 5. Send Acknowledgement back to Vendor
         logger.info(f"Sending acknowledgement email to {sender}...")
         
-        # Determine status representation for vendor email
-        email_status = "success"
-        if routing_outcome["status"] == "failed":
-            email_status = "failed"
-        elif routing_outcome["status"] == "partial" or extraction.document_type == "unknown":
-            email_status = "partial"
+        email_status = routing_outcome["status"]
             
         send_email_acknowledgement(
             vendor_email=sender,

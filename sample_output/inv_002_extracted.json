@@ -37,5 +37,5 @@
   ],
   "total_amount": 114750.0,
   "confidence_score": 0.95,
-  "reasoning": "The document is a standard invoice with a clear vendor name, invoice number, date, and total amount. All line items are well-defined and the total amount is accurately extracted."
+  "reasoning": "The document is a standard invoice with a clear vendor name, invoice number, date, and total amount. The line items are well-defined with quantities and prices."
 }

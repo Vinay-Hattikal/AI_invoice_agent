@@ -15,7 +15,7 @@
     "total_amount": 114750.0,
     "status": "success",
     "routed_to": "slack_notification",
-    "reason": "The document is a standard invoice with a clear vendor name, invoice number, date, and total amount. All line items are well-defined and the total amount is accurately extracted."
+    "reason": "The document is a standard invoice with a clear vendor name, invoice number, date, and total amount. The line items are well-defined with quantities and prices."
   },
   {
     "event_id": "evt_1002",
@@ -24,7 +24,7 @@
     "total_amount": 7280.0,
     "status": "success",
     "routed_to": "processed_invoices_csv",
-    "reason": "The document is classified as a standard invoice as it contains all necessary details including vendor name, invoice number, date, line items, and total amount."
+    "reason": "The document is a standard invoice with all required details including vendor name, invoice number, date, line items, and total amount clearly stated."
   },
   {
     "event_id": "evt_1003",
@@ -33,16 +33,7 @@
     "total_amount": 51500.0,
     "status": "success",
     "routed_to": "slack_notification",
-    "reason": "The document is classified as a standard invoice as it contains a vendor name, invoice number, date, line items with descriptions, quantities, unit prices, and a total amount. The total amount extracted is the 'Total Due' of 51,500."
-  },
-  {
-    "event_id": "evt_1005",
-    "filename": "inv_006.pdf",
-    "document_type": "credit_note",
-    "total_amount": -12000.0,
-    "status": "success",
-    "routed_to": "processed_invoices_csv",
-    "reason": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided about returned goods. The total amount extracted is the total credit note amount of -12000, which is the all-inclusive total amount indicated."
+    "reason": "The document is classified as a standard invoice due to the presence of a vendor name, invoice number, date, and a clear total amount. The total amount extracted is the 'Total Due' amount of 51,500."
   },
   {
     "event_id": "evt_1004",
@@ -51,7 +42,16 @@
     "total_amount": 58480.0,
     "status": "success",
     "routed_to": "slack_notification",
-    "reason": "The document is classified as a standard invoice as it contains a clear vendor name, invoice number, date, line items with quantities and prices, and a total amount. The total amount extracted is the Invoice Total of 58480."
+    "reason": "The document is classified as a standard invoice as it contains a vendor name, invoice number, date, detailed line items, and a total amount. The total amount extracted is the Invoice Total of 58480."
+  },
+  {
+    "event_id": "evt_1005",
+    "filename": "inv_006.pdf",
+    "document_type": "credit_note",
+    "total_amount": -12000.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided about returned goods. The total amount extracted is the 'Total Credit Note' amount of -12000, indicating a credit to the customer."
   },
   {
     "event_id": "evt_1006",
@@ -60,15 +60,15 @@
     "total_amount": -45924.0,
     "status": "success",
     "routed_to": "processed_invoices_csv",
-    "reason": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided. The total amount extracted is the 'Total Credit Note' value of -45924, which reflects the total credit being issued."
+    "reason": "The document is classified as a credit note based on the presence of 'CREDIT NOTE' in the title and the structure of the document. The total amount extracted is the 'Total Credit Note' amount of -45,924."
   },
   {
     "event_id": "evt_1007",
     "filename": "inv_008.jpg",
-    "document_type": "unknown",
-    "total_amount": 31143.0,
-    "status": "failed",
-    "routed_to": "human_review_log",
+    "document_type": "standard_invoice",
+    "total_amount": 40000.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
     "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
   },
   {
@@ -78,42 +78,24 @@
     "total_amount": 89200.0,
     "status": "success",
     "routed_to": "slack_notification",
-    "reason": "The document is a tax invoice with a clear vendor name, invoice number, date, line items, and a total amount. All required fields are present and readable."
+    "reason": "The document is a standard invoice with all required details including vendor name, invoice number, date, line items, and total amount."
   },
   {
     "event_id": "evt_1009",
     "filename": "inv_010.pdf",
-    "document_type": "credit_note",
-    "total_amount": 234566.0,
+    "document_type": "unknown",
+    "total_amount": null,
     "status": "failed",
     "routed_to": "human_review_log",
-    "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
+    "reason": "The document is classified as 'unknown' due to the missing totals section and the partial scan, which prevents extraction of the total amount. The vendor name and invoice number are partially readable, but the date is inferred from the visible text."
   },
   {
-    "event_id": "evt_cli_1779902200",
-    "filename": "inv_001.pdf",
-    "document_type": "standard_invoice",
-    "total_amount": 28400.0,
-    "status": "success",
-    "routed_to": "processed_invoices_csv",
-    "reason": "The document is classified as a standard invoice as it contains a clear vendor name, invoice number, date, line items with quantities and amounts, and a total amount due. The total amount extracted is the 'Total Due' value of 28,400."
-  },
-  {
-    "event_id": "evt_man_1779902922",
-    "filename": "inv_008.jpg",
-    "document_type": "credit_note",
-    "total_amount": 31143.0,
-    "status": "success",
-    "routed_to": "processed_invoices_csv",
-    "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
-  },
-  {
-    "event_id": "evt_man_1779902936",
-    "filename": "inv_008.jpg",
-    "document_type": "standard_invoice",
-    "total_amount": 31143.0,
-    "status": "success",
-    "routed_to": "processed_invoices_csv",
-    "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
+    "event_id": "evt_sim_1779920577",
+    "filename": "f564a168277dc5776a761562e92da37c399e4924.png",
+    "document_type": "unknown",
+    "total_amount": null,
+    "status": "failed",
+    "routed_to": "human_review_log",
+    "reason": "All OpenRouter models exhausted. Last error: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 807. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_3EJV94JaJDLcgMfJ4D7sLAe3XTc'}"
   }
 ]

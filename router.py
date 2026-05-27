@@ -75,7 +75,10 @@ def route_document(event: Dict[str, Any], extraction: InvoiceExtraction, file_pa
 
     # Case 1: Human review forced, extraction failed, or classified as 'unknown'
     if force_route_to == "human_review_log" or not success or extraction.document_type == "unknown":
-        outcome["status"] = "failed" if not success else "partial"
+        if not success or extraction.document_type == "unknown":
+            outcome["status"] = "failed"
+        else:
+            outcome["status"] = "partial"
         outcome["routed_to"] = "human_review_log"
         
         # Log to human review file

@@ -1,10 +1,35 @@
 {
-  "document_type": "credit_note",
+  "document_type": "unknown",
   "vendor_name": "VKR Engineering Works",
   "invoice_number": "VEW/2024/\u25a0\u25a0\u25a0",
-  "date": "2026-05-27",
-  "line_items": [],
-  "total_amount": 234566.0,
-  "confidence_score": 1.0,
-  "reasoning": "Manually verified and corrected by operator (overrode AI suggestion)."
+  "date": "2024-11-01",
+  "line_items": [
+    {
+      "description": "CNC machined bracket \u2013 AL6061 (batch 1)",
+      "quantity": 50.0,
+      "unit_price": 1450.0,
+      "amount": 72500.0
+    },
+    {
+      "description": "Surface treatment \u2013 anodising",
+      "quantity": 50.0,
+      "unit_price": 180.0,
+      "amount": 9000.0
+    },
+    {
+      "description": "[TEXT OBSCURED \u2014 scan error]",
+      "quantity": null,
+      "unit_price": null,
+      "amount": null
+    },
+    {
+      "description": "[COLUMN DATA MISSING]",
+      "quantity": null,
+      "unit_price": null,
+      "amount": null
+    }
+  ],
+  "total_amount": null,
+  "confidence_score": 0.5,
+  "reasoning": "The document is classified as 'unknown' due to the missing totals section and the partial scan, which prevents extraction of the total amount. The vendor name and invoice number are partially readable, but the date is inferred from the visible text."
 }

@@ -1,72 +1,120 @@
-# AI Automation Document Pipeline - Take-Home Assignment
+# AI Document Automation Pipeline
 
-An end-to-end AI agent pipeline designed for the logistics operations team to ingest, parse, classify, extract, and conditionally route vendor emails and invoice attachments.
+An AI-powered invoice processing system that automatically reads vendor documents, extracts structured invoice data, applies routing rules, and handles failures gracefully.
 
 ## Video Walkthrough
-[REQUIRED Walkthrough Video (OBS/Loom) - Click here to watch](https://loom.com/share/placeholder_link_for_submission)
-*(Please replace this placeholder with your actual Loom/screen-recording link for submission.)*
+
+Project Demo: https://drive.google.com/drive/folders/1Lr4AcQvKUOIQArrwC57-ypID35kfm_AU?usp=sharing
 
 ---
 
-## Setup & Run Instructions
+## Features
 
-### 1. Requirements
-- Windows OS (with PowerShell/Cmd)
-- Python 3.10 or higher installed and in system PATH
+* Processes PDF and image invoices
+* Extracts structured invoice fields using LLMs
+* Validates outputs using Pydantic schemas
+* Sends Slack alerts for invoices above ₹50,000
+* Stores lower-value invoices in CSV
+* Routes failed or unreadable files to a human review queue
+* Handles malformed AI responses and API failures gracefully
+* Uses model fallback rotation through OpenRouter
 
-### 2. Fast Setup (One-Command)
-Double-click the **`run_pipeline.bat`** script in the project root directory. This automated script will:
-1. Initialize a Python virtual environment (`venv`) if not already present.
-2. Update pip and install dependencies from `requirements.txt`.
-3. Load the payload and process the 10 sample files in sequence.
+---
 
-### 3. Manual Installation
-Alternatively, run these commands in your shell:
+## Tech Stack
+
+* Python 3
+* FastAPI
+* OpenRouter (Gemini Flash, Gemini Pro, GPT-4o-mini)
+* Pydantic
+* Slack Webhooks
+* Resend API
+* CSV Logging
+
+---
+
+## Project Structure
+
+* `main.py` / `server.py` → FastAPI backend and API routes
+* `pipeline.py` → Main workflow runner
+* `document_processor.py` → AI extraction and validation
+* `router.py` → Routing logic
+* `notifier.py` → Slack and email notifications
+* `models.py` → Pydantic schemas
+* `sample_output/` → Logs and extracted outputs
+
+---
+
+## Routing Rules
+
+* Invoice amount > ₹50,000 → Slack alert
+* Invoice amount ≤ ₹50,000 → CSV logging
+* Unknown or failed extraction → `human_review.log`
+
+---
+
+## Important Design Decision
+
+Invoice `inv_005` contained multiple totals:
+
+* subtotal,
+* invoice total,
+* and remaining payable amount after advance payment.
+
+The pipeline intentionally uses the GST-inclusive invoice total instead of the remaining payable amount to ensure high-value invoices are routed correctly through the approval workflow.
+
+---
+
+## Setup
+
+### Install Dependencies
+
 ```bash
-# Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate
-
-# Install requirements
 pip install -r requirements.txt
+```
 
-# Run the pipeline
+### Add `.env`
+
+```env
+OPENROUTER_API_KEY=your_key
+SLACK_WEBHOOK_URL=your_webhook
+RESEND_API_KEY=your_key
+EMAIL_SENDER=your_email
+```
+
+### Run Pipeline
+
+```bash
 python pipeline.py
 ```
 
-### 4. Configuration (`.env`)
-Provide credentials in `.env` (a `.env` template is provided as `.env.example`):
-```ini
-OPENROUTER_API_KEY=sk-or-v1-...
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/...
-RESEND_API_KEY=re_...
-EMAIL_SENDER=onboarding@resend.dev
-```
+---
+
+## Output Files
+
+* `sample_output/processed_invoices.csv`
+* `sample_output/human_review.log`
+* `sample_output/routing_log.json`
+* Extracted JSON files for each invoice
 
 ---
 
-## Design Decisions & Technical Architecture
+## Error Handling
 
-1. **Multimodal OpenRouter Extraction**: The pipeline is fully integrated with OpenRouter.
-   - **PDFs**: Text is extracted dynamically using the pure-Python `pypdf` library and parsed.
-   - **Images (JPG/PNG)**: Files are base64-encoded and sent as visual payloads using OpenRouter's vision message format.
-   - **Model Rotation Fallback**: The agent sequentially tries `google/gemini-2.5-flash`, then `google/gemini-2.5-pro` and `openai/gpt-4o-mini` to handle model timeouts or quota restrictions.
-2. **Schema Enforcement (Pydantic + JSON Mode)**: We use OpenRouter's JSON response formatting (`response_format={"type": "json_object"}`) coupled with Pydantic model validation (`models.py`) to guarantee type safety and JSON format conformance.
-3. **Ambiguous Invoice (`inv_005.pdf`) Handling**:
-   - *Observation*: Has Subtotal (Rs. 49,560), Invoice Total with GST (Rs. 58,480), and Net Payable after Rs. 10,000 advance (Rs. 48,480).
-   - *Decision*: We extract **Rs. 58,480** (GST-inclusive Invoice Total) as the primary `total_amount` for routing.
-   - *Rationale*: Operations and approval limits (> Rs. 50,000 threshold) are based on the complete transaction value/liability. Advances are payment settlement items and do not change the invoice value or tax liability.
-4. **Conditional Routing**:
-   - **Total > Rs. 50,000**: Dispatches a rich Slack Block Kit notification to the manager channel.
-   - **Total <= Rs. 50,000**: Logs a structured row in `sample_output/processed_invoices.csv`.
-   - **Unknown / Failed (e.g., `inv_010.pdf`)**: Appends details to `sample_output/human_review.log` with a descriptive reason.
-5. **Acknowledgment & Resend API**: Sends automated acknowledgement emails to vendors via the Resend API. If a vendor email is unverified (Resend free sandbox limit), it gracefully redirects the email to `delivered@resend.dev` (standard sandbox inbox) or falls back to a clean mock console print, ensuring pipeline continuity.
-6. **Graceful Degradation & Retry**: Implements `tenacity` retries with exponential backoff for rate limits (429) or transient errors. Bad/corrupt files return an `unknown` class extraction safely, preventing pipeline crashes.
+The system gracefully handles:
+
+* unreadable files
+* invalid AI responses
+* missing fields
+* API failures
+* model quota exhaustion
+
+If extraction fails, the document is automatically routed to the human review queue instead of being dropped.
 
 ---
 
-## Output Logs Location
-- Extractions: Individual JSON extractions are saved in `sample_output/` as `<filename>_extracted.json`.
-- Spreadsheet Fallback: `sample_output/processed_invoices.csv`.
-- Human Intervention Queue: `sample_output/human_review.log`.
-- Running Log: `sample_output/routing_log.json`.
+## Notes
+
+* If API keys are missing, the system falls back to mock logging.
+* OpenRouter model fallback is used to prevent failures during quota exhaustion.
+* The project is organized into modular components for easier maintenance and debugging.

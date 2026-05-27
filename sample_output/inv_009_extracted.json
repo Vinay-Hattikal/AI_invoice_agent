@@ -1,6 +1,6 @@
 {
   "document_type": "standard_invoice",
-  "vendor_name": "VIKAS INDUSTRIAL SUPPLIES",
+  "vendor_name": "Vikas Industrial Supplies",
   "invoice_number": "VIS/2024-25/1891",
   "date": "2024-11-19",
   "line_items": [
@@ -31,5 +31,5 @@
   ],
   "total_amount": 89200.0,
   "confidence_score": 0.95,
-  "reasoning": "The document is a tax invoice with a clear vendor name, invoice number, date, line items, and a total amount. All required fields are present and readable."
+  "reasoning": "The document is a standard invoice with all required details including vendor name, invoice number, date, line items, and total amount."
 }

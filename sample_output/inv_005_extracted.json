@@ -37,5 +37,5 @@
   ],
   "total_amount": 58480.0,
   "confidence_score": 0.95,
-  "reasoning": "The document is classified as a standard invoice as it contains a clear vendor name, invoice number, date, line items with quantities and prices, and a total amount. The total amount extracted is the Invoice Total of 58480."
+  "reasoning": "The document is classified as a standard invoice as it contains a vendor name, invoice number, date, detailed line items, and a total amount. The total amount extracted is the Invoice Total of 58480."
 }
