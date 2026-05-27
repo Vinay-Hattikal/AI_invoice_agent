@@ -1,0 +1,29 @@
+{
+  "document_type": "credit_note",
+  "vendor_name": "Nexora Supplies Pvt. Ltd.",
+  "invoice_number": "NXR-CN-2024-0041",
+  "date": "2024-11-12",
+  "line_items": [
+    {
+      "description": "Bubble wrap rolls \u2013 50m (returned, damaged)",
+      "quantity": 5.0,
+      "unit_price": 850.0,
+      "amount": 4250.0
+    },
+    {
+      "description": "Printed letterheads \u2013 wrong specifications",
+      "quantity": 2.0,
+      "unit_price": 500.0,
+      "amount": 1000.0
+    },
+    {
+      "description": "Restocking fee (waived as goodwill)",
+      "quantity": 1.0,
+      "unit_price": 0.0,
+      "amount": 0.0
+    }
+  ],
+  "total_amount": -12000.0,
+  "confidence_score": 0.95,
+  "reasoning": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided about returned goods. The total amount extracted is the total credit note amount of -12000, which is the all-inclusive total amount indicated."
+}

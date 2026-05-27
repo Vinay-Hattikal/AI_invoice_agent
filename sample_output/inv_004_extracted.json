@@ -1,0 +1,41 @@
+{
+  "document_type": "standard_invoice",
+  "vendor_name": "MERIDIAN FREIGHT SERVICES",
+  "invoice_number": "MFS/2024/NOV/02",
+  "date": "2024-11-22",
+  "line_items": [
+    {
+      "description": "FTL Mumbai\u2013Pune freight (3 trips)",
+      "quantity": 3.0,
+      "unit_price": 9000.0,
+      "amount": 27000.0
+    },
+    {
+      "description": "Loading/unloading charges",
+      "quantity": 3.0,
+      "unit_price": 2500.0,
+      "amount": 7500.0
+    },
+    {
+      "description": "Toll & highway charges",
+      "quantity": 3.0,
+      "unit_price": 1800.0,
+      "amount": 5400.0
+    },
+    {
+      "description": "Dunnage & lashing material",
+      "quantity": 1.0,
+      "unit_price": 4100.0,
+      "amount": 4100.0
+    },
+    {
+      "description": "Detention charges (2 hrs)",
+      "quantity": 2.0,
+      "unit_price": 1500.0,
+      "amount": 3000.0
+    }
+  ],
+  "total_amount": 51500.0,
+  "confidence_score": 0.95,
+  "reasoning": "The document is classified as a standard invoice as it contains a vendor name, invoice number, date, line items with descriptions, quantities, unit prices, and a total amount. The total amount extracted is the 'Total Due' of 51,500."
+}

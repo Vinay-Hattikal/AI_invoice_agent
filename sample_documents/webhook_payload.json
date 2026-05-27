@@ -1,0 +1,134 @@
+{
+  "events": [
+    {
+      "event_id": "evt_1000",
+      "received_at": "2024-11-25T08:00:00+05:30",
+      "from": "accounts@nexorasupplies.in",
+      "subject": "INV NXR-2024-0381 \u2013 Office Supplies",
+      "body_preview": "Please find attached the invoice/document from Nexora Supplies Pvt. Ltd.. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_001.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 45000,
+        "local_path": "./sample_invoices/inv_001.pdf"
+      }
+    },
+    {
+      "event_id": "evt_1001",
+      "received_at": "2024-11-25T08:30:00+05:30",
+      "from": "billing@swiftbridge.in",
+      "subject": "Invoice INV-SBT-2024-1102",
+      "body_preview": "Please find attached the invoice/document from Swiftbridge Tech Solutions. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_002.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 53000,
+        "local_path": "./sample_invoices/inv_002.pdf"
+      }
+    },
+    {
+      "event_id": "evt_1002",
+      "received_at": "2024-11-25T09:00:00+05:30",
+      "from": "priya.packaging@gmail.com",
+      "subject": "Invoice PPW/24-25/0087",
+      "body_preview": "Please find attached the invoice/document from Priya Packaging Works. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_003.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 61000,
+        "local_path": "./sample_invoices/inv_003.pdf"
+      }
+    },
+    {
+      "event_id": "evt_1003",
+      "received_at": "2024-11-25T09:30:00+05:30",
+      "from": "accounts@meridianfreight.in",
+      "subject": "Tax Invoice MFS/2024/NOV/0214",
+      "body_preview": "Please find attached the invoice/document from Meridian Freight Services. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_004.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 69000,
+        "local_path": "./sample_invoices/inv_004.pdf"
+      }
+    },
+    {
+      "event_id": "evt_1004",
+      "received_at": "2024-11-25T010:00:00+05:30",
+      "from": "accounts@kalyanelectrical.in",
+      "subject": "Invoice KEW/24/0556 \u2013 Electrical Items",
+      "body_preview": "Please find attached the invoice/document from Kalyan Electrical Works. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_005.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 77000,
+        "local_path": "./sample_invoices/inv_005.pdf"
+      }
+    },
+    {
+      "event_id": "evt_1005",
+      "received_at": "2024-11-25T010:30:00+05:30",
+      "from": "accounts@nexorasupplies.in",
+      "subject": "Credit Note NXR-CN-2024-0041",
+      "body_preview": "Please find attached the invoice/document from Nexora Supplies Pvt. Ltd.. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_006.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 85000,
+        "local_path": "./sample_invoices/inv_006.pdf"
+      }
+    },
+    {
+      "event_id": "evt_1006",
+      "received_at": "2024-11-25T011:00:00+05:30",
+      "from": "billing@swiftbridge.in",
+      "subject": "Credit Note CN-SBT-2024-0019",
+      "body_preview": "Please find attached the invoice/document from Swiftbridge Tech Solutions. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_007.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 93000,
+        "local_path": "./sample_invoices/inv_007.pdf"
+      }
+    },
+    {
+      "event_id": "evt_1007",
+      "received_at": "2024-11-25T011:30:00+05:30",
+      "from": "rajpath.accounts@gmail.com",
+      "subject": "Invoice RCS/24-25/0772",
+      "body_preview": "Please find attached the invoice/document from Rajpath Courier Services. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_008.jpg",
+        "content_type": "image/jpeg",
+        "size_bytes": 101000,
+        "local_path": "./sample_invoices/inv_008.jpg"
+      }
+    },
+    {
+      "event_id": "evt_1008",
+      "received_at": "2024-11-25T012:00:00+05:30",
+      "from": "vikas.ind.supplies@gmail.com",
+      "subject": "Tax Invoice VIS/2024-25/1891",
+      "body_preview": "Please find attached the invoice/document from Vikas Industrial Supplies. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_009.jpg",
+        "content_type": "image/jpeg",
+        "size_bytes": 109000,
+        "local_path": "./sample_invoices/inv_009.jpg"
+      }
+    },
+    {
+      "event_id": "evt_1009",
+      "received_at": "2024-11-25T012:30:00+05:30",
+      "from": "unknown_sender_882@protonmail.com",
+      "subject": "Fwd: Invoice from vendor (incomplete)",
+      "body_preview": "Please find attached the invoice/document from [Sender unclear]. Kindly process at the earliest.",
+      "attachment": {
+        "filename": "inv_010.pdf",
+        "content_type": "application/pdf",
+        "size_bytes": 117000,
+        "local_path": "./sample_invoices/inv_010.pdf"
+      }
+    }
+  ]
+}

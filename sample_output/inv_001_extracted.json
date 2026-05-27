@@ -1,0 +1,35 @@
+{
+  "document_type": "standard_invoice",
+  "vendor_name": "Nexora Supplies Pvt. Ltd.",
+  "invoice_number": "NXR-2024-0381",
+  "date": "2024-11-10",
+  "line_items": [
+    {
+      "description": "Office stationery bundle (A4 reams, pens, files)",
+      "quantity": 15.0,
+      "unit_price": 1100.0,
+      "amount": 16500.0
+    },
+    {
+      "description": "Bubble wrap rolls \u2013 50m",
+      "quantity": 5.0,
+      "unit_price": 850.0,
+      "amount": 4250.0
+    },
+    {
+      "description": "Courier packaging tape (48mm x 100m)",
+      "quantity": 30.0,
+      "unit_price": 100.0,
+      "amount": 3000.0
+    },
+    {
+      "description": "Printed letterheads (500 pcs)",
+      "quantity": 3.0,
+      "unit_price": 500.0,
+      "amount": 1500.0
+    }
+  ],
+  "total_amount": 28400.0,
+  "confidence_score": 0.95,
+  "reasoning": "The document is classified as a standard invoice as it contains all necessary details including vendor name, invoice number, date, line items, and total amount."
+}

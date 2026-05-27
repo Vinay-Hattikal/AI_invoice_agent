@@ -1,0 +1,17 @@
+event_id,timestamp,vendor_name,invoice_number,date,total_amount,document_type,attachment_file
+evt_1000,2024-11-25T08:00:00+05:30,Nexora Supplies Pvt. Ltd.,NXR-2024-0381,2024-11-10,28400.0,standard_invoice,inv_001.pdf
+evt_1002,2024-11-25T09:00:00+05:30,Priya Packaging Works,PPW/24-25/0087,2024-11-05,7280.0,standard_invoice,inv_003.pdf
+evt_1005,2024-11-25T010:30:00+05:30,Nexora Supplies Pvt. Ltd.,NXR-CN-2024-0041,2024-11-12,12000.0,credit_note,inv_006.pdf
+evt_1005,2024-11-25T010:30:00+05:30,Nexora Supplies Pvt. Ltd.,NXR-CN-2024-0041,2024-11-12,-12000.0,credit_note,inv_006.pdf
+evt_1006,2024-11-25T011:00:00+05:30,SWIFTBRIDGE TECH SOLUTIONS,CN-SBT-2024-0019,2024-11-25,-45924.0,credit_note,inv_007.pdf
+evt_1007,2024-11-25T011:30:00+05:30,RAJPATH COURIER SERVICES,RCS/24-25/0772,2024-11-08,31143.0,standard_invoice,inv_008.jpg
+evt_cli_1779902200,2026-05-27T22:46:40.931876,Nexora Supplies Pvt. Ltd.,NXR-2024-0381,2024-11-10,28400.0,standard_invoice,inv_001.pdf
+evt_1002,2024-11-25T09:00:00+05:30,Priya Packaging Works,PPW/24-25/0087,2024-11-05,7280.0,standard_invoice,inv_003.pdf
+evt_1002,2024-11-25T09:00:00+05:30,Priya Packaging Works,PPW/24-25/0087,2024-11-05,7280.0,standard_invoice,inv_003.pdf
+evt_1002,2024-11-25T09:00:00+05:30,Priya Packaging Works,PPW/24-25/0087,2024-11-05,7280.0,standard_invoice,inv_003.pdf
+evt_1007,2024-11-25T011:30:00+05:30,Rajpath Courier Services,RCS/24-25/0772,2024-11-08,31143.0,standard_invoice,inv_008.jpg
+evt_man_1779902922,2026-05-27T22:58:42.640105,Rajpath Courier Services,RCS/24-25/0772,2026-05-27,31143.0,credit_note,inv_008.jpg
+evt_man_1779902936,2026-05-27T22:58:56.948789,Rajpath Courier Services,RCS/24-25/0772,2026-05-27,31143.0,standard_invoice,inv_008.jpg
+evt_1000,2024-11-25T08:00:00+05:30,Nexora Supplies Pvt. Ltd.,NXR-2024-0381,2024-11-10,28400.0,standard_invoice,inv_001.pdf
+evt_1002,2024-11-25T09:00:00+05:30,Priya Packaging Works,PPW/24-25/0087,2024-11-05,7280.0,standard_invoice,inv_003.pdf
+evt_1002,2024-11-25T09:00:00+05:30,Priya Packaging Works,PPW/24-25/0087,2024-11-05,7280.0,standard_invoice,inv_003.pdf

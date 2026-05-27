@@ -1,0 +1,35 @@
+{
+  "document_type": "standard_invoice",
+  "vendor_name": "VIKAS INDUSTRIAL SUPPLIES",
+  "invoice_number": "VIS/2024-25/1891",
+  "date": "2024-11-19",
+  "line_items": [
+    {
+      "description": "MS Flat Bar 50x6mm (per kg)",
+      "quantity": 500.0,
+      "unit_price": 68.0,
+      "amount": 34000.0
+    },
+    {
+      "description": "Hex Bolt M12x50 GR 8.8 (per 100)",
+      "quantity": 80.0,
+      "unit_price": 420.0,
+      "amount": 33360.0
+    },
+    {
+      "description": "Cutting wheel 230mm (box of 25)",
+      "quantity": 4.0,
+      "unit_price": 1800.0,
+      "amount": 7200.0
+    },
+    {
+      "description": "Safety gloves - leather palm (pair)",
+      "quantity": 50.0,
+      "unit_price": 260.0,
+      "amount": 13000.0
+    }
+  ],
+  "total_amount": 89200.0,
+  "confidence_score": 0.95,
+  "reasoning": "The document is a tax invoice with a clear vendor name, invoice number, date, line items, and a total amount. All required fields are present and readable."
+}

@@ -1,0 +1,10 @@
+{
+  "document_type": "standard_invoice",
+  "vendor_name": "Rajpath Courier Services",
+  "invoice_number": "RCS/24-25/0772",
+  "date": "2026-05-27",
+  "line_items": [],
+  "total_amount": 31143.0,
+  "confidence_score": 1.0,
+  "reasoning": "Manually verified and corrected by operator (overrode AI suggestion)."
+}

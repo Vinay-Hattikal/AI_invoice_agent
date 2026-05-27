@@ -1,0 +1,41 @@
+{
+  "document_type": "standard_invoice",
+  "vendor_name": "SWIFTBRIDGE TECH SOLUTIONS",
+  "invoice_number": "INV-SBT-2024-1102",
+  "date": "2024-11-18",
+  "line_items": [
+    {
+      "description": "Cloud infrastructure setup (AWS EC2, RDS, S3 config)",
+      "quantity": 1.0,
+      "unit_price": 35000.0,
+      "amount": 35000.0
+    },
+    {
+      "description": "Custom API development \u2013 3 endpoints",
+      "quantity": 3.0,
+      "unit_price": 12000.0,
+      "amount": 36000.0
+    },
+    {
+      "description": "Security audit & penetration testing",
+      "quantity": 1.0,
+      "unit_price": 18500.0,
+      "amount": 18500.0
+    },
+    {
+      "description": "Staff training session (4 hrs x 3 batches)",
+      "quantity": 3.0,
+      "unit_price": 4000.0,
+      "amount": 12000.0
+    },
+    {
+      "description": "Documentation & handover pack",
+      "quantity": 1.0,
+      "unit_price": 6500.0,
+      "amount": 6500.0
+    }
+  ],
+  "total_amount": 114750.0,
+  "confidence_score": 0.95,
+  "reasoning": "The document is a standard invoice with a clear vendor name, invoice number, date, and total amount. All line items are well-defined and the total amount is accurately extracted."
+}

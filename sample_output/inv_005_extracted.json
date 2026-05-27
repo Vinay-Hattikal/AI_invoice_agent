@@ -1,0 +1,41 @@
+{
+  "document_type": "standard_invoice",
+  "vendor_name": "Kalyan Electrical Works",
+  "invoice_number": "KEW/24/0556",
+  "date": "2024-11-14",
+  "line_items": [
+    {
+      "description": "PVC conduit pipe 25mm (100 mtr)",
+      "quantity": 10.0,
+      "unit_price": 820.0,
+      "amount": 8200.0
+    },
+    {
+      "description": "MCB distribution box 8-way",
+      "quantity": 15.0,
+      "unit_price": 1240.0,
+      "amount": 18600.0
+    },
+    {
+      "description": "Armoured cable 4-core 10 sqmm (per mtr)",
+      "quantity": 50.0,
+      "unit_price": 285.0,
+      "amount": 14250.0
+    },
+    {
+      "description": "LED street light 80W",
+      "quantity": 10.0,
+      "unit_price": 840.0,
+      "amount": 8400.0
+    },
+    {
+      "description": "Earthing electrode set",
+      "quantity": 2.0,
+      "unit_price": 55.0,
+      "amount": 110.0
+    }
+  ],
+  "total_amount": 58480.0,
+  "confidence_score": 0.95,
+  "reasoning": "The document is classified as a standard invoice as it contains a clear vendor name, invoice number, date, line items with quantities and prices, and a total amount. The total amount extracted is the Invoice Total of 58480."
+}

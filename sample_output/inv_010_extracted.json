@@ -1,0 +1,10 @@
+{
+  "document_type": "credit_note",
+  "vendor_name": "VKR Engineering Works",
+  "invoice_number": "VEW/2024/\u25a0\u25a0\u25a0",
+  "date": "2026-05-27",
+  "line_items": [],
+  "total_amount": 234566.0,
+  "confidence_score": 1.0,
+  "reasoning": "Manually verified and corrected by operator (overrode AI suggestion)."
+}

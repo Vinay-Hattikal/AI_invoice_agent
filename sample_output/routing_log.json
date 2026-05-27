@@ -1,0 +1,119 @@
+[
+  {
+    "event_id": "evt_1000",
+    "filename": "inv_001.pdf",
+    "document_type": "standard_invoice",
+    "total_amount": 28400.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "The document is classified as a standard invoice as it contains all necessary details including vendor name, invoice number, date, line items, and total amount."
+  },
+  {
+    "event_id": "evt_1001",
+    "filename": "inv_002.pdf",
+    "document_type": "standard_invoice",
+    "total_amount": 114750.0,
+    "status": "success",
+    "routed_to": "slack_notification",
+    "reason": "The document is a standard invoice with a clear vendor name, invoice number, date, and total amount. All line items are well-defined and the total amount is accurately extracted."
+  },
+  {
+    "event_id": "evt_1002",
+    "filename": "inv_003.pdf",
+    "document_type": "standard_invoice",
+    "total_amount": 7280.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "The document is classified as a standard invoice as it contains all necessary details including vendor name, invoice number, date, line items, and total amount."
+  },
+  {
+    "event_id": "evt_1003",
+    "filename": "inv_004.pdf",
+    "document_type": "standard_invoice",
+    "total_amount": 51500.0,
+    "status": "success",
+    "routed_to": "slack_notification",
+    "reason": "The document is classified as a standard invoice as it contains a vendor name, invoice number, date, line items with descriptions, quantities, unit prices, and a total amount. The total amount extracted is the 'Total Due' of 51,500."
+  },
+  {
+    "event_id": "evt_1005",
+    "filename": "inv_006.pdf",
+    "document_type": "credit_note",
+    "total_amount": -12000.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided about returned goods. The total amount extracted is the total credit note amount of -12000, which is the all-inclusive total amount indicated."
+  },
+  {
+    "event_id": "evt_1004",
+    "filename": "inv_005.pdf",
+    "document_type": "standard_invoice",
+    "total_amount": 58480.0,
+    "status": "success",
+    "routed_to": "slack_notification",
+    "reason": "The document is classified as a standard invoice as it contains a clear vendor name, invoice number, date, line items with quantities and prices, and a total amount. The total amount extracted is the Invoice Total of 58480."
+  },
+  {
+    "event_id": "evt_1006",
+    "filename": "inv_007.pdf",
+    "document_type": "credit_note",
+    "total_amount": -45924.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided. The total amount extracted is the 'Total Credit Note' value of -45924, which reflects the total credit being issued."
+  },
+  {
+    "event_id": "evt_1007",
+    "filename": "inv_008.jpg",
+    "document_type": "unknown",
+    "total_amount": 31143.0,
+    "status": "failed",
+    "routed_to": "human_review_log",
+    "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
+  },
+  {
+    "event_id": "evt_1008",
+    "filename": "inv_009.jpg",
+    "document_type": "standard_invoice",
+    "total_amount": 89200.0,
+    "status": "success",
+    "routed_to": "slack_notification",
+    "reason": "The document is a tax invoice with a clear vendor name, invoice number, date, line items, and a total amount. All required fields are present and readable."
+  },
+  {
+    "event_id": "evt_1009",
+    "filename": "inv_010.pdf",
+    "document_type": "credit_note",
+    "total_amount": 234566.0,
+    "status": "failed",
+    "routed_to": "human_review_log",
+    "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
+  },
+  {
+    "event_id": "evt_cli_1779902200",
+    "filename": "inv_001.pdf",
+    "document_type": "standard_invoice",
+    "total_amount": 28400.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "The document is classified as a standard invoice as it contains a clear vendor name, invoice number, date, line items with quantities and amounts, and a total amount due. The total amount extracted is the 'Total Due' value of 28,400."
+  },
+  {
+    "event_id": "evt_man_1779902922",
+    "filename": "inv_008.jpg",
+    "document_type": "credit_note",
+    "total_amount": 31143.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
+  },
+  {
+    "event_id": "evt_man_1779902936",
+    "filename": "inv_008.jpg",
+    "document_type": "standard_invoice",
+    "total_amount": 31143.0,
+    "status": "success",
+    "routed_to": "processed_invoices_csv",
+    "reason": "Manually verified and corrected by operator (overrode AI suggestion)."
+  }
+]

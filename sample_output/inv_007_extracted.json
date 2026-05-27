@@ -1,0 +1,29 @@
+{
+  "document_type": "credit_note",
+  "vendor_name": "SWIFTBRIDGE TECH SOLUTIONS",
+  "invoice_number": "CN-SBT-2024-0019",
+  "date": "2024-11-25",
+  "line_items": [
+    {
+      "description": "Cloud infrastructure setup \u2013 cancelled scope",
+      "quantity": 1.0,
+      "unit_price": -22000.0,
+      "amount": -22000.0
+    },
+    {
+      "description": "API development \u2013 2 endpoints not delivered",
+      "quantity": 2.0,
+      "unit_price": -12000.0,
+      "amount": -24000.0
+    },
+    {
+      "description": "Processing fee retained (non-refundable)",
+      "quantity": 1.0,
+      "unit_price": 3000.0,
+      "amount": 3000.0
+    }
+  ],
+  "total_amount": -45924.0,
+  "confidence_score": 0.95,
+  "reasoning": "The document is classified as a credit note due to the presence of 'CREDIT NOTE' in the title and the details provided. The total amount extracted is the 'Total Credit Note' value of -45924, which reflects the total credit being issued."
+}
